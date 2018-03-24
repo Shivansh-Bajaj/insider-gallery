@@ -38,6 +38,6 @@ app.get('/', function(req, res, next) {
 });
 
 
-app.listen(process.env.port, 'localhost', function () {
+app.listen(process.env.PORT || config.app.port, 'localhost', function () {
     logger.info("Server is Listening on port",process.env.port);
 });
