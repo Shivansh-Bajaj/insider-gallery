@@ -1,3 +1,5 @@
+'use strict';
+
 const cloudinary = require('cloudinary'),
     config     = require('../../config.js').cloudinary,
     async      = require('async');
@@ -8,7 +10,7 @@ function configure() {
         api_key: config.api_key,
         api_secret: config.api_secret
     });
-};
+}
 
 module.exports = {
     uploadMultiple: function (images) {

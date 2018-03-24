@@ -3,7 +3,7 @@
 angular.module('myApp.view2', ['ngRoute'])
 
     .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/view2', {
+        $routeProvider.when('/gallery', {
             templateUrl: 'view2/view2.html',
             controller: 'View2Ctrl',
             css: 'view2/view2.css'
@@ -11,10 +11,10 @@ angular.module('myApp.view2', ['ngRoute'])
 
     }])
 
-    .controller('View2Ctrl', [ '$scope', '$document', 'imageServices', function($scope, $document, imageServices) {
+    .controller('View2Ctrl', [ '$scope', '$document', 'imageServices',
+        function($scope, $document, imageServices) {
 
-        var vm = this;
-        var slideIndex = 1;
+        let slideIndex = 1;
         $scope.gallery = {};
         $scope.selected = '';
 
@@ -36,20 +36,20 @@ angular.module('myApp.view2', ['ngRoute'])
         // Next/previous controls
         $scope.plusSlides = function (n) {
             showSlides(slideIndex += n);
-        }
+        };
 
         // Thumbnail image controls
         $scope.currentSlide = function (n) {
             showSlides(slideIndex = n);
-        }
+        };
 
         function showSlides (n) {
-            var i;
-            var slides = $document[0].getElementsByClassName("mySlides");
-            var dots = $document[0].getElementsByClassName("demo");
-            var captionText = $document[0].getElementById("caption");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
+            let i;
+            let slides = $document[0].getElementsByClassName("mySlides");
+            let dots = $document[0].getElementsByClassName("demo");
+            let captionText = $document[0].getElementById("caption");
+            if (n > slides.length) {slideIndex = 1;}
+            if (n < 1) {slideIndex = slides.length;}
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
@@ -67,7 +67,8 @@ angular.module('myApp.view2', ['ngRoute'])
                     $scope.gallery = data.data.data;
                 })
                 .catch((err) => {
-                    $scope.errorMessage = "cant get gallery";
+                    $scope.errorMessage = err || "cant fatch gallery images";
+                    alert($scope.errorMessage);
                 });
         };
         $scope.getImages();

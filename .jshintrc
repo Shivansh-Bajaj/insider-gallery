@@ -1,6 +1,18 @@
 {
-  "strict": "global",
-  "curly": true,
-  "eqeqeq": true,
-  "undef": true
+"globals": {
+  "angular": true,
+  "$":false,
+  "alert": true
+},
+"browser": true,
+"jquery": true,
+"node": true,
+"esversion": 6,
+"eqeqeq": true,
+"maxlen": 100,
+"strict": true,
+"undef": true,
+"unused": true,
+"eqnull": true
 }
+

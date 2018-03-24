@@ -1,0 +1,49 @@
+<span class="close cursor" ng-click="closeModal()">&times;</span>
+<div class="modal-content">
+
+    <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img ng-src="{{selected.imageGallery}}">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img ng-src="{{selected.imageHorizontal}}">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img ng-src="{{selected.imageVertical}}">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img ng-src="{{selected.imageHorizontalSmall}}">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" ng-click="plusSlides(-1)">&#10094;</a>
+    <a class="next" ng-click="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+    <div class="row">
+        <!-- Thumbnail image controls -->
+        <div class="col-md-3 col-sm-6 column">
+            <img class="demo" ng-src="{{selected.imageGallery}}" ng-click="currentSlide(1)" alt="imageGallery">
+        </div>
+
+        <div class="col-md-3 col-sm-6 column">
+            <img class="demo" ng-src="{{selected.imageHorizontal}}" ng-click="currentSlide(2)" alt="imageHorizontal">
+        </div>
+
+        <div class="col-md-3 col-sm-6 column">
+            <img class="demo" ng-src="{{selected.imageVertical}}" ng-click="currentSlide(3)" alt="imageVertical">
+        </div>
+
+        <div class="col-md-3 col-sm-6 column">
+            <img class="demo" ng-src="{{selected.imageHorizontalSmall}}" ng-click="currentSlide(4)" alt="imageHorizontalSmall">
+        </div>
+    </div>

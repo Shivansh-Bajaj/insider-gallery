@@ -3,14 +3,15 @@
 angular.module('myApp.view1', ['ngRoute', 'uiCropper'])
 
     .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/view1', {
+        $routeProvider.when('/upload', {
             templateUrl: 'view1/view1.html',
             controller: 'View1Ctrl',
             css: 'view1/view1.css'
         });
     }])
 
-    .controller('View1Ctrl', ['$scope', '$document', '$q', 'imageServices', function($scope, $document, $q, imageServices) {
+    .controller('View1Ctrl', ['$scope', '$document', '$q', 'imageServices',
+        function($scope, $document, $q, imageServices) {
         $scope.myImage='';
         $scope.myCroppedImage='';
         $scope.filename = '';
@@ -62,11 +63,11 @@ angular.module('myApp.view1', ['ngRoute', 'uiCropper'])
             $document[0].getElementById('myModal').style.display = "block";
         };
 
-        var handleFileSelect=function(evt) {
-            var file=evt.currentTarget.files[0];
-            var reader = new FileReader();
+        let handleFileSelect=function(evt) {
+            let file=evt.currentTarget.files[0];
+            let reader = new FileReader();
             reader.onload = function (evt) {
-                var img = new Image();
+                let img = new Image();
                 img.onload = function () {
                     if(img.width === 1024 && img.height === 1024) {
                         $scope.$apply(function($scope) {
@@ -88,7 +89,7 @@ angular.module('myApp.view1', ['ngRoute', 'uiCropper'])
 
         $scope.submit = function () {
             $scope.state = 1;
-            if($scope.results != {}) {
+            if($scope.results !== {}) {
                 imageServices.uploadImages($scope.results)
                     .then((results) => {
                         if(results.hasOwnProperty('data') && results.data.status === "success") {
@@ -96,10 +97,10 @@ angular.module('myApp.view1', ['ngRoute', 'uiCropper'])
                             $scope.results = results.data.data;
                         }
                     })
-                    .catch((err, results) => {
+                    .catch((err) => {
                         $scope.close();
                         alert(err);
-                    })
+                    });
             }
         };
 

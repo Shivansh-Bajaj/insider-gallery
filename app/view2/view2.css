@@ -72,6 +72,8 @@
 .column {
     float: left;
     width: 25%;
+    background: black;
+    border: 2px solid white;
 }
 
 /* The Modal (background) */

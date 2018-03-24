@@ -49,6 +49,13 @@
     font-size: 20px;
 }
 
+.row {
+    height: 100vh;
+}
+
+.btn-block {
+    width: 100vw;
+}
 
 modal {
     display: none;

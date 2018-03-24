@@ -14,7 +14,7 @@ myModule.factory('imageServices', function($q, $http) {
             });
         },
         getImages: function () {
-            return $http.get('/api/v1/images/get);
+            return $http.get('/api/v1/images/get');
         }
     };
 });
