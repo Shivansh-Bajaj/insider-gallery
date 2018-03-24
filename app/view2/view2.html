@@ -1,0 +1,12 @@
+<div>
+  <div class="tz-gallery">
+    <div class="row">
+      <div ng-repeat="image in gallery" class="col-sm-12 col-md-4">
+        <a class="lightbox" ng-click="openModal(image)" href="">
+          <img ng-src="{{image.imageGallery}}" alt="img">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="myModal" ng-include="'view2/model/model.html'" class="modal"></div>
+</div>

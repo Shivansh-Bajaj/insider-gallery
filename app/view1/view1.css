@@ -1,0 +1,111 @@
+.cropArea {
+    background: black;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: center;
+    border: 2px solid white;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.text {
+    color: white;
+    margin-top: 5px;
+}
+
+.preview-image {
+    margin: 0 auto;
+    background: #E4E4E4;
+    min-width: 200px;
+    min-height: 150px;
+}
+
+.jumbotron .small {
+    font-size: 16px;
+}
+.jumbotron .text-muted{
+    color: #7D8FA1;
+}
+
+.tool {
+    font-size: 20px;
+}
+
+
+modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    min-width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: black;
+    overflow: scroll;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    height: 100vh;
+    overflow: scroll;
+}
+
+/*.row {*/
+    /*height: 100vh;*/
+/*}*/
+
+/* The Close Button */
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.submit {
+    height: 10%;
+    text-align: center;
+}
+
+.loader {
+    align-self: center;
+}
+
+.black {
+    background: black;
+}
+

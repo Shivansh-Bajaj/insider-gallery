@@ -1,0 +1,6 @@
+{
+  "strict": "global",
+  "curly": true,
+  "eqeqeq": true,
+  "undef": true
+}
