@@ -39,6 +39,6 @@ app.get('/', function(req, res, next) {
 
 
 app.listen(process.env.PORT || config.app.port, '0.0.0.0' , function () {
-    logger.info("Server is Listening on port",process.env.port || config.app.port;
-    );
+    logger.info("Server is Listening on port",process.env.port || config.app.port);
+    )
 });
