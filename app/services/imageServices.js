@@ -13,8 +13,8 @@ myModule.factory('imageServices', function($q, $http) {
                 data: images
             });
         },
-        getImages: function (limit, skip) {
-            return $http.get('/api/v1/images/get?limit=' + limit + '&skip=' + skip);
+        getImages: function () {
+            return $http.get('/api/v1/images/get);
         }
     };
 });

@@ -61,8 +61,8 @@ angular.module('myApp.view2', ['ngRoute'])
             captionText.innerHTML = dots[slideIndex-1].alt;
         }
 
-        $scope.getImages = function (skip, limit) {
-            imageServices.getImages(limit, skip)
+        $scope.getImages = function () {
+            imageServices.getImages()
                 .then((data) => {
                     $scope.gallery = data.data.data;
                 })
@@ -70,5 +70,5 @@ angular.module('myApp.view2', ['ngRoute'])
                     $scope.errorMessage = "cant get gallery";
                 });
         };
-        $scope.getImages(0, 10);
+        $scope.getImages();
     }]);

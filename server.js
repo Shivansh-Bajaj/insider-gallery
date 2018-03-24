@@ -8,11 +8,13 @@ const bodyParser = require('body-parser'),
     path = require('path'),
     routes = require('./serverapp/api/index');
 
-mongoose.connect('mongodb://localhost/test');
-
+// mongoose.connect('mongodb://localhost/test');
+let mongo_url = "mongodb://"+config.mlab.username+":"+config.mlab.password+"@"+config.mlab.url;
+console.log(mongo_url);
+mongoose.connect(mongo_url);
 var db = mongoose.connection;
 
-db.on('error', function(err){logger.error('connection error:', err)});
+db.on('error', function callback(err) { logger.error('mongoose connection error:', err)} );
 
 db.once('open', function callback () {
     logger.info("mongoose connected");
