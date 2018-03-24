@@ -20,15 +20,15 @@ All upload image need to be of size `1024 x 1024`
 
 demo: for `image crop then upload`:
 
-![Alt Text](../README_GIFs/demo1.gif)
+![Alt Text](./README_GIFs/demo1.gif)
 
 demo: to see all uploaded images:
 
-![Alt Text](../README_GIFs/demo2.gif)
+![Alt Text](./README_GIFs/demo2.gif)
 
 demo: in case file dimension is not 1024 x 1024
 
-![Alt Text](../README_GIFs/demo_fail.gif)
+![Alt Text](./README_GIFs/demo_fail.gif)
 
 ## Step to build
 
