@@ -121,6 +121,7 @@
     display: block;
     background: black;
     text-align: center;
+    min-height: 470px;
 }
 
 /* Next & previous buttons */
