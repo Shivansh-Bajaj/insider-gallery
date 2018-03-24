@@ -25,12 +25,12 @@ angular.module('myApp.view1', ['ngRoute', 'uiCropper'])
         $scope.errorMessage = '';
 
         $scope.size = {
-            imageHorizontal: {
+            imageVertical: {
                 "result-size": { w: 365, h: 450 },
                 "area-size": { w: 106.9, h: 131.8 },
                 "aspect-ratio": 0.811
             },
-            imageVertical: {
+            imageHorizontal: {
                 "result-size": { w: 755, h: 450 },
                 "area-size": { w: 221.2, h: 131.8 },
                 "aspect-ratio": 1.677
