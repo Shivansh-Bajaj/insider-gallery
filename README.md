@@ -60,3 +60,61 @@ npm start
 ```
 
 Now browse to the app at [`localhost:3000/`].
+
+
+### APIs info  
+
+####API 1: 
+
+Get all images: 
+
+    API End Point: /api/v1/images/get
+    Request: {
+        METHOD: ['GET'],
+        header: { content-type: 'application/json'}
+    }
+    Response: {
+        status: 'success'/'fail',
+        data: [
+            {
+                id: <String> imageId 
+                imageGallery: <String> Gallery size cropped image URL,
+                imageHorizontal: <String> Horizontal size cropped image URL
+                imageHorizontalSmall: <String> Horizontal small size cropped image URL
+                imageVertical: <String> Vertical size cropped image URL
+                created_at: <Date> timeStamp
+            }
+        ],
+        err: "error message" (in case of error)
+
+    }
+
+####API 2:  
+
+Upload Cropped Images  
+
+    API End Point: /api/v2/images/upload
+    Request: {
+        METHOD: ['POST'],
+        header: { content-type: 'application/json'},
+        body:  
+        {
+            imageGallery: <Image> Gallery size cropped image,
+            imageHorizontal: <Image> Horizontal size cropped image
+            imageHorizontalSmall: <Image> Horizontal small size cropped image
+            imageVertical: <Image> Vertical size cropped image
+        }
+    }
+    Response: {
+        status: 'success'/'fail',
+        data: {
+            id: <String> imageId 
+            imageGallery: <String> Gallery size cropped image URL,
+            imageHorizontal: <String> Horizontal size cropped image URL
+            imageHorizontalSmall: <String> Horizontal small size cropped image URL
+            imageVertical: <String> Vertical size cropped image URL
+            created_at: <Date> timeStamp
+        },
+        err: "error message" (in case of error)
+    }
+
