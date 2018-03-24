@@ -1,6 +1,6 @@
 module.exports = {
     app:{
-      port: process.env.port || 3000
+      port: 3000
     },
     cloudinary:{
       cloud_name:"dnp9yrx92",

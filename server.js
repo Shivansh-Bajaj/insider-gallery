@@ -10,7 +10,6 @@ const bodyParser = require('body-parser'),
 
 // mongoose.connect('mongodb://localhost/test');
 let mongo_url = "mongodb://"+config.mlab.username+":"+config.mlab.password+"@"+config.mlab.url;
-console.log(mongo_url);
 mongoose.connect(mongo_url);
 var db = mongoose.connection;
 
@@ -39,6 +38,6 @@ app.get('/', function(req, res, next) {
 });
 
 
-app.listen(config.app.port, 'localhost', function () {
-    logger.info("Server is Listening on port", config.app.port);
+app.listen(process.env.port || config.app.port, 'localhost', function () {
+    logger.info("Server is Listening on port",process.env.port || config.app.port);
 });
